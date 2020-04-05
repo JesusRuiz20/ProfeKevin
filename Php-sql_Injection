@@ -1,0 +1,10 @@
+<?php
+
+// $uid: ' or uid like '%admin%
+$consulta = "UPDATE usertable SET pwd='...' WHERE uid='' or uid like '%admin%';";
+
+// $pwd: jejeje', trusted=100, admin='yes
+$consulta = "UPDATE usertable SET pwd='jejeje', trusted=100, admin='yes' WHERE
+...;";
+
+?>
