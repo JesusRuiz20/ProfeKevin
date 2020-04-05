@@ -1,0 +1,12 @@
+<?php
+//DATOS ENVIADOS POR EL USUARIO
+// eliminar un archivo del directorio personal del usuario .. ¿o
+// quizás de alguien más?
+unlink ($variable_malvada);
+// Imprimir el registro del acceso... ¿o quizás una entrada de /etc/passwd?
+fwrite ($desc_archivo, $variable_malvada);
+// Ejecutar algo trivial.. ¿o rm -rf *?
+system ($variable_malvada);
+exec ($variable_malvada);
+
+?>
