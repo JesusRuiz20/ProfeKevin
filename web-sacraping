@@ -1,0 +1,22 @@
+from bs4 import BeautifulSoup
+import requests
+import pandas as pd
+
+url='https://esports.as.com/worlds-2019/Resultados-clasificaciones-Mundial-League-Legends_0_1291370852.html'
+page = requests.get(url)
+soup = BeautifulSoup(page.content, 'html.parser')
+eq = soup.find_all('strong', class_= "mce")
+
+
+equipos = list()
+
+for i in eq:
+    equipos.append(i.text)
+    
+print(equipos)
+
+
+
+archivo = open("equipos.txt","w")
+archivo.write(str(equipos))
+archivo.close()
